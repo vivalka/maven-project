@@ -15,7 +15,7 @@ pipeline
 	 {
 	 steps
 		{
-			withMaven(jdk: 'jdkLocal-8', maven: 'localMaven') 
+			withMaven(jdk: 'localJdk', maven: 'localMaven') 
 			{
 				sh 'mvn compile'	
 			}
@@ -28,7 +28,7 @@ pipeline
 	 {
 	 steps
 		{
-			withMaven(jdk: 'jdkLocal-8', maven: 'localMaven') 
+			withMaven(jdk: 'localJdk', maven: 'localMaven') 
 			{
 				sh 'mvn test'	
 					
@@ -40,7 +40,7 @@ pipeline
 	 {
 	 steps
 		{
-			withMaven(jdk: 'jdkLocal-8', maven: 'localMaven') 
+			withMaven(jdk: 'localJdk', maven: 'localMaven') 
 			{
 				sh 'mvn package'	
 					
@@ -54,4 +54,3 @@ pipeline
 	 
    }
    
-}
